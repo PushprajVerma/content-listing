@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    body {
+        background-color: #171717;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .images {
+        height: 120px;
+        width: 120px;
+        color: #FFFFFF;
+    }
+}
