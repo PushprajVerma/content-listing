@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import ImageGrid from './ImageGrid';
+import Movies from './components/movies/Movies'
+import Header from './components/header/header'
 
 function App() {
   return (
     <div className="App">
-      <ImageGrid />
+      <Header />
+      <Movies />
     </div>
   );
 }
