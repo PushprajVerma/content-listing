@@ -1,0 +1,23 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.images {
+    height: 50%;
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%;
+    object-fit: cover;
+}
+
+.no-result {
+  color: white;
+  display: flex;
+  justify-content: center;  
+}
