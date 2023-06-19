@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     background-image: url('../../image/nav_bar.png');
     display: flex;
@@ -8,7 +8,8 @@
     align-items: center;
     top: 0px;
     z-index: 999; 
-    margin: auto;   
+    padding: 25px;
+    left: 0;  
 }
 
 .header-title {
