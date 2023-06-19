@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import axios from 'axios';
 import { setImageData, setFilteredImages, setIsLoading, setCurrentPage } from '../../reducer'
-// import { imageData, filteredImages, isLoading, currentPage } from '../../movieSelector'
 import './Movies.css'
 
 const Movies = () => {
@@ -12,19 +11,12 @@ const Movies = () => {
   const isLoading = useSelector((state) => state.movies.isLoading);
   const filteredImages = useSelector((state) => state.movies.filteredImages);
 
-  // const [imageData, setImageData] = useState([]);
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [isLoading, setIsLoading] = useState(false);
-
   useEffect(() => {
     const fetchData = async () => {
       dispatch(setIsLoading(true));
       try {
         const response = await axios.get(`https://test.create.diagnal.com/data/page${currentPage}.json`);
-        console.log('response', response.data.page['content-items'].content)
-        // setImageData(prevData => [...prevData, ...response.data.page['content-items'].content]);
         dispatch(setImageData(response.data.page['content-items'].content))
-        // setCurrentPage(prevPage => prevPage + 1);
       } catch (error) {
         console.error('Error fetching image data:', error);
       }
@@ -50,24 +42,11 @@ const Movies = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //     const filtered = imageData.filter(image => {
-  //       return image.title.toLowerCase().includes(searchTerm.toLowerCase());
-  //     });
-  
-  //     setFilteredImages(filtered);
-  //   }, [imageData, searchTerm]);
-
-  
-  // const handleSearch = e => {
-  //   setSearchTerm(e.target.value);
-  // };
-
   return (
-    // <div style={{ margin: '10px' }}>
+    <>
+    {filteredImages?.length > 0 ? (
       <div className="image-grid">
-        {filteredImages?.length > 0 ? (
-          filteredImages?.map((image, index) => (
+          {filteredImages?.map((image, index) => (
             <div className='images'>
                 <img
                     key={index}
@@ -78,12 +57,9 @@ const Movies = () => {
                 />
                 <div>{image.name}</div>
             </div>
-          ))
-        ) : (
-          <p>No results found</p>
-        )}
-      </div>
-    // </div>
+          ))}
+      </div>) : <div className='no-result'>No results found</div>}
+    </>
   );
 };
 

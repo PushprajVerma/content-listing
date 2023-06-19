@@ -39,7 +39,7 @@ const Header = () => {
                 <div><img src={backButton} alt="back" className='back'/></div>
                 {
                     search ?
-                    <input className='search-input' type="text" onChange={(e) => {handleSearch(e)}} placeholder="Search" /> :
+                    <input className='search-input' type="text" onChange={(e) => {handleSearch(e)}} placeholder="Search" autoFocus /> :
                         <div className='header-title'>Romantic Comedy</div>
                 }
                 <div className='search'>                    
