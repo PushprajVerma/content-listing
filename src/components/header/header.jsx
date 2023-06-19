@@ -27,10 +27,6 @@ const Header = () => {
     const onSearchIconClick = () => {
         setSearch((preValue) => !preValue)
         setSearchTerm('')
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
     }
 
     const renderHeader = () => {
