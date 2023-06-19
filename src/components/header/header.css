@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     background-image: url('../../image/nav_bar.png');
     display: flex;
@@ -13,12 +13,12 @@
 
 .header-title {
     padding: 10px;
-    flex-basis: 100%;
+    flex-basis: 65%;
     font-size: 30px;
 }
 
 .search-input {
-    flex-basis: 100%;
+    flex-basis: 65%;
     height: 30px;
     margin: 10px;
 }
