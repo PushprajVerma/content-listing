@@ -1,14 +1,15 @@
 .header {
     position: fixed;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     background-image: url('../../image/nav_bar.png');
     display: flex;
     color: white;
     align-items: center;
     top: 0px;
-    z-index: 999; 
-    margin: auto;   
+    z-index: 999;
+    left: 0;
+    padding: 25px;  
 }
 
 .header-title {
