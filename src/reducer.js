@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { createStore } from 'redux';
-
 
 export const movieReducer = createSlice({
   name: 'movies',
@@ -26,37 +24,6 @@ export const movieReducer = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { setImageData, setFilteredImages, setCurrentPage, setIsLoading } = movieReducer.actions
 
 export default movieReducer.reducer
-
-// const initialState = {
-//     counter: 0,
-//     imageData: [],
-//     user: null,
-//   };
-
-// const reducer = (state = initialState, action) => {
-//     switch (action.type) {
-//       case 'INCREMENT':
-//         return {
-//           ...state,
-//           counter: state.counter + 1,
-//         };
-//       case 'ADD_TODO':
-//         return {
-//           ...state,
-//           imageData: [...state.imageData, action.payload],
-//         };
-//       case 'SET_USER':
-//         return {
-//           ...state,
-//           user: action.payload,
-//         };
-//       default:
-//         return state;
-//     }
-//   };
-  
-// export default reducer;
