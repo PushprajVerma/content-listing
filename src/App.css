@@ -1,15 +1,17 @@
-body {
-  background-color: #171717;
-  font-family: 'Titillium Web', sans-serif;
-  position: relative;
-  top: 80px;
-}
+@media (max-width: 767px) {
+  body {
+    background-color: #171717;
+    font-family: 'Titillium Web', sans-serif;
+    position: relative;
+    top: 80px;
+  }
 
-.App {
-  margin: 10px;
-  position: relative;
-  width: 90%;
-  margin: auto;
-  top: 20px;
-}  
+  .App {
+    margin: 10px;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    top: 20px;
+  }
+}
 
